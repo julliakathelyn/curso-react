@@ -1,26 +1,28 @@
 import './App.css';
 import HelloWord from './components/HelloWord';
+import SayMyName from './components/SayMyName'; 
+import Pessoa from './components/Pessoa';
 
 function App() {
 
-  const name = "Jullia" 
-  const newName = name.toLocaleUpperCase();
-
-  function soma (a, b){
-      return a+b
-  }
-
-  const url = 'https://images.pexels.com/photos/36122172/pexels-photo-36122172.jpeg'
+  const name = "Matheus"
 
   return (
     <div className="App">
-      <h1> {name} aterando JSX</h1>
-      <p> Ola, {newName}</p>
-      <p>A Soma de a + b:   {soma(10, 20)} </p>
-      <img src = {url} />
-      <span> todos os elemento precisam estar envolvido por um elemento pai </span>
-      <span> a maneira correta de declarar classese css em react é com className</span>
+      
       <HelloWord/>
+      <SayMyName name="Jullia" />
+      <SayMyName name="Lucas" />
+      <SayMyName name="Maria" />
+      <SayMyName name="Cleyton" />
+      <SayMyName name={name} />
+
+      <Pessoa 
+      nome="Jullia Kathelyn"
+      idade="22"
+      profissao="programadora"
+      foto="https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg" />
+      
     </div>
   );
 }
