@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWord from './components/HelloWord';
 
 function App() {
+
+  const name = "Jullia" 
+  const newName = name.toLocaleUpperCase();
+
+  function soma (a, b){
+      return a+b
+  }
+
+  const url = 'https://images.pexels.com/photos/36122172/pexels-photo-36122172.jpeg'
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> {name} aterando JSX</h1>
+      <p> Ola, {newName}</p>
+      <p>A Soma de a + b:   {soma(10, 20)} </p>
+      <img src = {url} />
+      <span> todos os elemento precisam estar envolvido por um elemento pai </span>
+      <span> a maneira correta de declarar classese css em react é com className</span>
+      <HelloWord/>
     </div>
   );
 }
